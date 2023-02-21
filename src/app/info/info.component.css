@@ -1,0 +1,85 @@
+section {
+    width: 90%;
+    margin: auto;
+    margin-top: 15%;
+    font-size: 1vw;
+    margin-left: 15%;
+    height: 85%;
+    position: relative;
+}
+
+section h1 {
+    margin: 0;
+    color: #062951;
+    font-size: 2vw;
+}
+
+section p {
+    margin-top: 0.5vw;
+    color: hsl(231, 11%, 63%);
+}
+
+form ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.25vw;
+}
+
+form ul li {
+    display: flex;
+    flex-direction: column;
+}
+
+form ul li label {
+    color: #062951;
+    margin-bottom: 0.75vw;
+}
+
+form ul li input {
+    width: 100%;
+    height: 2.65vw;
+    padding-left: 1vw;
+    border: 0.1vw solid hsl(229, 24%, 87%);
+    border-radius: 0.3vw;
+    font-size: 1vw;
+    color: #062951;
+}
+
+form ul li input:focus {
+    border: 0.1vw solid hsl(213, 96%, 18%);
+    outline: none;
+}
+
+.boton {
+    position: absolute;
+    right: -1vw;
+    bottom: 1vw;
+}
+
+.boton div {
+    background-color: #174a8b;
+    height: 2.65vw;
+    width: 8vw;
+    color: white;
+    border-radius: 0.5vw;
+    border: none;
+    font-size: 1vw;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputFocusError:focus {
+    border: 0.1vw solid hsl(354, 84%, 57%) !important;
+}
+
+.labelError::before {
+    content: 'This field is required';
+    position: absolute;
+    right: 0;
+    color: hsl(354, 84%, 57%);
+}

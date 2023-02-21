@@ -1,0 +1,27 @@
+<section>
+    <h1>Personal info</h1>
+    <p>Please provide your name, email address, and phone number.</p>
+    <form name="datos">
+        <ul>
+            <li>
+                <label [class]="labelnameclass" for="name">Name</label>
+                <input  [class]="nameclass" (click)="labelnumberclass='';labelemailclass='';labelnameclass='';emailclass='';numberclass=''" [(ngModel)]="name" type="text" id="name" placeholder="e.g. Stephen King" [ngModelOptions]="{standalone: true}">
+
+            </li>
+            <li>
+                <label [class]="labelemailclass" for="email">Email Address</label>
+                <input [class]="emailclass" (click)="labelnumberclass='';labelemailclass='';labelnameclass='';nameclass='';numberclass=''" [(ngModel)]="email" type="email" id="email" placeholder="e.g. stephenking@lorem.com" [ngModelOptions]="{standalone: true}">
+
+            </li>
+            <li>
+                <label [class]="labelnumberclass" for="number">Phone Number</label>
+                <input [class]="numberclass" (click)="labelnumberclass='';labelemailclass='';labelnameclass='';nameclass='';emailclass=''"  [(ngModel)]="number" type="text" id="number" placeholder="e.g. +1 234 567 890" [ngModelOptions]="{standalone: true}">
+
+            </li>
+            
+        </ul>
+    </form>
+    <div class="boton">
+        <div (click)="validateForm()">Next Step</div>
+    </div>
+</section>

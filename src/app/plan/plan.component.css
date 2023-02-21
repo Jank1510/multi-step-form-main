@@ -1,0 +1,130 @@
+section {
+    width: 90%;
+    margin: auto;
+    margin-top: 15%;
+    font-size: 1vw;
+    margin-left: 15%;
+    height: 85%;
+    position: relative;
+}
+
+section h1 {
+    margin: 0;
+    color: #062951;
+    font-size: 2vw;
+}
+
+
+.contentCard {
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.5vw;
+    margin-top: 1.5vw;
+}
+
+.contentCard div {
+    width: 7vw;
+    border: 0.1vw solid hsl(229, 24%, 87%);
+    border-radius: 0.5vw;
+    padding: 1vw;
+}
+
+.descriptioncard {
+    color: #062951;
+    margin-top: 3vw;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.colorP {
+    color: hsl(231, 11%, 63%);
+    margin-top: 0;
+}
+
+.freeMonth {
+    color: #062951;
+    display: none;font-size: 0.9vw;
+    margin: 0;
+}
+
+.montYear {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 2vw;
+    background-color: #f8f9fe;
+    height: 3vw;
+    border-radius: 0.5vw;
+    align-items: center;
+}
+
+.changeYearMonth {
+    display: flex;
+    flex-direction: row;
+    width: 3vw;
+    background-color: #03295a;
+    height: 1.5vw;
+    border-radius: 1vw;
+    margin: 0 1.2vw;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    align-items: center;
+}
+
+.checkCircule {
+    width: 1.1vw;
+    height: 1.1vw;
+    background-color: white;
+    border-radius: 1.1vw;
+}
+#month{
+    display: block;position: absolute;
+    left: 0.25vw;
+    animation-name: yearToMonth;
+    animation-duration: 1s;
+}
+#year{
+    display: block;position: absolute;
+    right: 0.25vw;
+    animation-name: MontToYear;
+    animation-duration: 1s;
+}
+@keyframes yearToMonth {
+    from{
+        margin-left: 1.35vw;
+    }
+    to{
+        margin: 0;
+    }
+    
+}
+@keyframes MontToYear {
+    from{
+        margin-right: 1.35vw;
+    }
+    to{
+        margin: 0;
+    }
+    
+}
+.boton {position: absolute;
+    bottom: 1vw;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.boton div {
+    background-color: #174a8b;
+    height: 2.65vw;
+    width: 8vw;
+    color: white;
+    border-radius: 0.5vw;
+    border: none;
+    font-size: 1vw;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

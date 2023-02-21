@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+body{margin: 0;
+    background-color: #eef5ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+app-root{height: 75vh;
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    border-radius: 1vw;
+    box-shadow: 0 0.2vw 1.5vw -0.4vw #00000036;
+}
+*{
+    font-family: 'Ubuntu', sans-serif;
+}

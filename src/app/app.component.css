@@ -1,0 +1,60 @@
+header {
+    background-image: url('../assets/images/bg-sidebar-desktop.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 35%;
+    margin: 1.5vw;
+    border-radius: 1vw;
+}
+
+header ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 12%;
+    margin-top: 12%;
+}
+
+header ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2vw;
+}
+
+.navNum {
+    width: 3vw;
+    height: 3vw;
+    border-radius: 3.5vw; 
+    display: flex;
+    justify-content: center;
+    border: 0.15vw solid hsl(229, 24%, 87%);
+    align-items: center;
+    font-size: 1.1vw;
+    color: white;
+}
+#nav1{
+    background-color: #bee1fd;
+    color: black;
+}
+.navInfo p {
+    margin: 0;
+}
+
+.navInfo {
+    grid-row-gap: 0.5vw;
+    row-gap: 0.25vw;
+    display: grid;
+    margin-left: 1vw;
+}
+
+.navInfo .step {
+    font-size: 1vw;
+    color: hsl(229, 24%, 87%);
+}
+
+.navInfo .txtNav {
+    color: white;
+    ;
+    font-weight: bold;
+    font-size: 1.1vw;
+}
