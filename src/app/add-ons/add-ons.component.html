@@ -2,43 +2,43 @@
     <h1>Pick add-ons</h1>
     <p>Add-ons help enhance your gaming experience.</p>
     <div>
-        <div>
-            <div>
-                <img src="" alt="check">
+        <div [ngStyle]="{'border':border1}" (click)="checkOnlineService()" class="eleccion">
+            <div [ngStyle]="{'background-color':check1}" class="divcheck">
+                <img src="../../assets/images/icon-checkmark.svg" alt="  ">
             </div>
             <div>
-                <p>Online Service</p>
-                <p>Access to multiplayer games</p>
+                <p class="title">Online Service</p>
+                <p class="txt">Access to multiplayer games</p>
 
             </div>
-            <span>+$1/mo</span>
+            <span class="plus">{{onlineserviceTXT}}</span>
         </div>
-        <div>
-            <div>
-                <img src="" alt="check">
+        <div [ngStyle]="{'border':border2}" (click)="checkLargeStorage()" class="eleccion">
+            <div [ngStyle]="{'background-color':check2}" class="divcheck">
+                <img src="../../assets/images/icon-checkmark.svg" alt="  ">
             </div>
             <div>
-                <p>Larger storage</p>
-                <p>Extra 1TB of cloud save</p>
+                <p class="title">Larger storage</p>
+                <p class="txt">Extra 1TB of cloud save</p>
 
             </div>
-            <span>+$2/mo</span>
+            <span class="plus">{{largestorageTXT}}</span>
         </div>
-        <div>
-            <div>
-                <img src="" alt="check">
+        <div [ngStyle]="{'border':border3}" (click)="checkCustomizableProfile()" class="eleccion">
+            <div [ngStyle]="{'background-color':check3}" class="divcheck">
+                <img src="../../assets/images/icon-checkmark.svg" alt="  ">
             </div>
             <div>
-                <p>Customizable profile</p>
-                <p>Custom theme on your profile</p>
+                <p class="title">Customizable profile</p>
+                <p class="txt">Custom theme on your profile</p>
 
             </div>
-            <span>+$2/mo</span>
+            <span class="plus">{{customizableperfilTXT}}</span>
         </div>
     </div>
 
-    <div>
-        <button>Go Back</button>
-        <button>Next Step</button>
+    <div class="boton">
+        <div (click)="back()">Go Back</div>
+        <div (click)="next()">Next Step</div>
     </div>
 </section>

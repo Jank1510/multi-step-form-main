@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../service/data.service';
 
 @Component({
   selector: 'app-summary',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SummaryComponent implements OnInit {
 
-  constructor() { }
+  constructor(private data: DataService) {
+    console.log(data.getPlanSelected()+' '+data.getTipoPlan())
+    console.log(data.getTipoAddons())
+   }
 
   ngOnInit(): void {
   }

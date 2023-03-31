@@ -2,22 +2,22 @@
     <h1>Select your plan</h1>
     <p class="colorP">You have the option of monthly or yearly biling</p>
     <div class="contentCard">
-        <div>
+        <div class="cards" [ngStyle]="{'border':borderArcade}" (click)="arcade()">
             <img src="../../assets/images/icon-arcade.svg" alt="arcade">
             <p class="descriptioncard">Arcade</p>
-            <p  class="colorP">$9/mo</p>
+            <p  class="colorP">{{txtarcade}}</p>
             <p [ngStyle]="{'display':viewFreeMonth}" class="freeMonth">2 months free</p>
         </div>
-        <div>
+        <div  class="cards" [ngStyle]="{'border':borderAdvanced}" (click)="advanced()">
             <img src="../../assets/images/icon-advanced.svg" alt="advanced">
             <p class="descriptioncard">Advanced</p>
-            <p  class="colorP">$12/mo</p>
+            <p  class="colorP">{{txtadvanced}}</p>
             <p [ngStyle]="{'display':viewFreeMonth}" class="freeMonth">2 months free</p>
         </div>
-        <div>
+        <div  class="cards" [ngStyle]="{'border':borderPro}" (click)="pro()">
             <img src="../../assets/images/icon-pro.svg" alt="pro">
             <p class="descriptioncard">Pro</p>
-            <p  class="colorP">$15/mo</p>
+            <p  class="colorP">{{txtpro}}</p>
             <p [ngStyle]="{'display':viewFreeMonth}" class="freeMonth">2 months free</p>
         </div>
     </div>

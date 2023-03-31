@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { DataService } from '../service/data.service';
 
 @Component({
   selector: 'app-add-ons',
@@ -6,10 +8,88 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-ons.component.css']
 })
 export class AddOnsComponent implements OnInit {
-
-  constructor() { }
-
+  check1: string = '#ffffff'
+  border1: string = '0.1vw solid hsl(229, 24%, 87%)'
+  checkeado1: boolean = false
+  check2: string = '#ffffff'
+  border2: string = '0.1vw solid hsl(229, 24%, 87%)'
+  checkeado2: boolean = false
+  check3: string = '#ffffff'
+  border3: string = '0.1vw solid hsl(229, 24%, 87%)'
+  checkeado3: boolean = false
+  onlineserviceTXT:string=''
+  largestorageTXT:string=''
+  customizableperfilTXT:string=''
+  constructor(private router: Router, private data: DataService) {
+    switch (data.getTipoPlan()) {
+      case 'year':
+      this.onlineserviceTXT='+$10/yr'
+      this.largestorageTXT='+$20/yr'
+      this.customizableperfilTXT='+$20/yr'
+        break;
+      case 'month':
+      this.onlineserviceTXT='+$1/mo'
+      this.largestorageTXT='+$2/mo'
+      this.customizableperfilTXT='$2/mo'
+        break; 
+    }
+  }
   ngOnInit(): void {
   }
+  checkOnlineService(): void {
+    if (this.checkeado1 == false) {
+      this.check1 = '#4943fe'
+      this.checkeado1 = true
+      this.border1 = '0.1vw solid #062951'
+      this.data.setTipoAddons({name:'Online Service',
+      valor: this.onlineserviceTXT
+    })
+    } else {
+      if (this.checkeado1 == true) {
+        this.check1 = '#ffffff'
+        this.checkeado1 = false
+        this.border1 = '0.1vw solid hsl(229, 24%, 87%)'
+      }
+    }
+  }
+  checkLargeStorage(): void {
+    if (this.checkeado2 == false) {
+      this.check2 = '#4943fe'
+      this.checkeado2 = true
+      this.border2 = '0.1vw solid #062951'
+      this.data.setTipoAddons({name:'Larger Storage',
+      valor: this.largestorageTXT
+    })
+    } else {
+      if (this.checkeado2 == true) {
+        this.check2 = '#ffffff'
+        this.checkeado2 = false
+        this.border2 = '0.1vw solid hsl(229, 24%, 87%)'
+      }
+    }
+  }
+  checkCustomizableProfile(): void {
+    if (this.checkeado3 == false) {
+      this.check3 = '#4943fe'
+      this.checkeado3 = true
+      this.border3 = '0.1vw solid #062951'
+      this.data.setTipoAddons({name:'Customizable Profile',
+      valor: this.customizableperfilTXT
+    })
+    } else {
+      if (this.checkeado3 == true) {
+        this.check3 = '#ffffff'
+        this.checkeado3 = false
+        this.border3 = '0.1vw solid hsl(229, 24%, 87%)'
+      }
+    }
+  }
+  next(): void {
+    this.router.navigate(['summary'])
 
+  }
+  back(): void {
+    this.router.navigate(['plan'])
+
+  }
 }

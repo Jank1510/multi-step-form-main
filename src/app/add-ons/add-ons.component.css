@@ -1,0 +1,84 @@
+section {
+    width: 77.5%;
+    margin: auto;
+    margin-top: 10%;
+    font-size: 1vw;
+    margin-left: 10%;
+    height: 85%;
+    position: relative;
+}
+
+section h1 {
+    margin: 0;
+    color: #062951;
+    font-size: 2vw;
+}
+
+section p {
+    margin-top: 0.5vw;
+    color: hsl(231, 11%, 63%);
+}
+
+.eleccion {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border-radius: 0.5vw;
+    border: 0.1vw solid hsl(229, 24%, 87%);
+    margin-top: 3%;
+    cursor: pointer !important;
+    height: 4.5vw;
+    align-items: center;
+}
+
+.eleccion .divcheck {
+    border: 0.1vw solid hsl(229, 24%, 87%);
+    width: 1.25vw;
+    height: 1.25vw;
+    margin: auto 1.6vw;
+    border-radius: 0.35vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    color: #062951 !important;
+    font-weight: bolder;
+    margin: 0 !important;
+    margin-bottom: 0.3vw !important;
+}
+
+.txt {
+    margin: 0 !important;
+    margin-top: 0.3vw !important;
+
+}
+
+.plus {
+    margin-left: auto;
+    margin-right: 6%;
+    color: #4943fe;
+}
+
+.boton {
+    position: absolute;
+    bottom: 1vw;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.boton div {
+    background-color: #174a8b;
+    height: 2.65vw;
+    width: 8vw;
+    color: white;
+    border-radius: 0.5vw;
+    border: none;
+    font-size: 1vw;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

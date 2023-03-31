@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { DataService } from '../service/data.service';
 
 @Component({
   selector: 'app-info',
@@ -8,13 +9,19 @@ import { Router } from '@angular/router';
 })
 export class InfoComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private data: DataService) {
+    this.name = this.data.getName()
+    this.email = this.data.getEmail()
+    this.number = this.data.getPhone()
+    console.log(this.name)
+  }
 
   ngOnInit(): void {
+
   }
-  name: string = ''
-  email: string = ''
-  number: string = ''
+  name: string = this.data.getName()
+  email: string = this.data.getEmail()
+  number: string = this.data.getPhone()
   nameclass: string = ''
   emailclass: string = ''
   numberclass: string = ''
@@ -52,6 +59,9 @@ export class InfoComponent implements OnInit {
           this.labelemailclass = ''
           this.labelnumberclass = 'labelError'
         } else {
+          this.data.setEmail(this.email)
+          this.data.setName(this.name)
+          this.data.setPhone(this.number)
           this.numberclass = ''
           this.emailclass = ''
           this.nameclass = ''

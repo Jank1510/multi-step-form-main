@@ -1,9 +1,9 @@
 section {
-    width: 90%;
+    width: 77.5%;
     margin: auto;
-    margin-top: 15%;
+    margin-top: 10%;
     font-size: 1vw;
-    margin-left: 15%;
+    margin-left: 10%;
     height: 85%;
     position: relative;
 }
@@ -27,6 +27,7 @@ section h1 {
     border: 0.1vw solid hsl(229, 24%, 87%);
     border-radius: 0.5vw;
     padding: 1vw;
+    cursor: pointer !important;
 }
 
 .descriptioncard {
@@ -43,7 +44,8 @@ section h1 {
 
 .freeMonth {
     color: #062951;
-    display: none;font-size: 0.9vw;
+    display: none;
+    font-size: 0.9vw;
     margin: 0;
 }
 
@@ -78,37 +80,47 @@ section h1 {
     background-color: white;
     border-radius: 1.1vw;
 }
-#month{
-    display: block;position: absolute;
+
+#month {
+    display: block;
+    position: absolute;
     left: 0.25vw;
     animation-name: yearToMonth;
     animation-duration: 1s;
 }
-#year{
-    display: block;position: absolute;
+
+#year {
+    display: block;
+    position: absolute;
     right: 0.25vw;
     animation-name: MontToYear;
     animation-duration: 1s;
 }
+
 @keyframes yearToMonth {
-    from{
+    from {
         margin-left: 1.35vw;
     }
-    to{
+
+    to {
         margin: 0;
     }
-    
+
 }
+
 @keyframes MontToYear {
-    from{
+    from {
         margin-right: 1.35vw;
     }
-    to{
+
+    to {
         margin: 0;
     }
-    
+
 }
-.boton {position: absolute;
+
+.boton {
+    position: absolute;
     bottom: 1vw;
     display: flex;
     width: 100%;
@@ -127,4 +139,21 @@ section h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.contentCard div {
+    animation-duration: 1s;
+}
+
+@keyframes animationNoselected {
+    0% {
+        border: 0.1vw solid rgb(214, 217, 230);
+    }
+
+    50% {
+        border: 0.1vw solid rgb(224, 98, 98);
+    }
+    100% {
+        border: 0.1vw solid rgb(214, 217, 230);
+    }
 }
