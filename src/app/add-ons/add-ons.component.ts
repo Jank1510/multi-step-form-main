@@ -17,22 +17,23 @@ export class AddOnsComponent implements OnInit {
   check3: string = '#ffffff'
   border3: string = '0.1vw solid hsl(229, 24%, 87%)'
   checkeado3: boolean = false
-  onlineserviceTXT:string=''
-  largestorageTXT:string=''
-  customizableperfilTXT:string=''
+  onlineserviceTXT: string = ''
+  largestorageTXT: string = ''
+  customizableperfilTXT: string = ''
   constructor(private router: Router, private data: DataService) {
-    switch (data.getTipoPlan()) {
+    switch (data.getyearOrmonth()) {
       case 'year':
-      this.onlineserviceTXT='+$10/yr'
-      this.largestorageTXT='+$20/yr'
-      this.customizableperfilTXT='+$20/yr'
+        this.onlineserviceTXT = '+$10/yr'
+        this.largestorageTXT = '+$20/yr'
+        this.customizableperfilTXT = '+$20/yr'
         break;
       case 'month':
-      this.onlineserviceTXT='+$1/mo'
-      this.largestorageTXT='+$2/mo'
-      this.customizableperfilTXT='$2/mo'
-        break; 
+        this.onlineserviceTXT = '+$1/mo'
+        this.largestorageTXT = '+$2/mo'
+        this.customizableperfilTXT = '$2/mo'
+        break;
     }
+
   }
   ngOnInit(): void {
   }
@@ -41,14 +42,16 @@ export class AddOnsComponent implements OnInit {
       this.check1 = '#4943fe'
       this.checkeado1 = true
       this.border1 = '0.1vw solid #062951'
-      this.data.setTipoAddons({name:'Online Service',
-      valor: this.onlineserviceTXT
-    })
+      this.data.setTipoAddons({
+        name: 'Online Service',
+        valor: this.onlineserviceTXT
+      })
     } else {
       if (this.checkeado1 == true) {
         this.check1 = '#ffffff'
         this.checkeado1 = false
         this.border1 = '0.1vw solid hsl(229, 24%, 87%)'
+        this.data.deleteAddons('Online Service')
       }
     }
   }
@@ -57,14 +60,16 @@ export class AddOnsComponent implements OnInit {
       this.check2 = '#4943fe'
       this.checkeado2 = true
       this.border2 = '0.1vw solid #062951'
-      this.data.setTipoAddons({name:'Larger Storage',
-      valor: this.largestorageTXT
-    })
+      this.data.setTipoAddons({
+        name: 'Larger Storage',
+        valor: this.largestorageTXT
+      })
     } else {
       if (this.checkeado2 == true) {
         this.check2 = '#ffffff'
         this.checkeado2 = false
         this.border2 = '0.1vw solid hsl(229, 24%, 87%)'
+        this.data.deleteAddons('Larger Storage')
       }
     }
   }
@@ -73,23 +78,35 @@ export class AddOnsComponent implements OnInit {
       this.check3 = '#4943fe'
       this.checkeado3 = true
       this.border3 = '0.1vw solid #062951'
-      this.data.setTipoAddons({name:'Customizable Profile',
-      valor: this.customizableperfilTXT
-    })
+      this.data.setTipoAddons({
+        name: 'Customizable Profile',
+        valor: this.customizableperfilTXT
+      })
     } else {
       if (this.checkeado3 == true) {
         this.check3 = '#ffffff'
         this.checkeado3 = false
         this.border3 = '0.1vw solid hsl(229, 24%, 87%)'
+        this.data.deleteAddons('Customizable Profile')
       }
     }
   }
   next(): void {
-    this.router.navigate(['summary'])
-
+    if (this.data.getTipoAddons().length > 0) {
+      this.router.navigate(['summary'])
+    } else {
+      let elementos: NodeListOf<HTMLElement> = document.querySelectorAll('.eleccion');
+      setTimeout(() => {
+        for (let i = 0; i < elementos.length; i++) {
+          elementos[i].style.animationName = 'none';
+        }
+      }, 1000);
+      for (let i = 0; i < elementos.length; i++) {
+        elementos[i].style.animationName = 'animationNoselected';
+      }
+    } 
   }
   back(): void {
     this.router.navigate(['plan'])
-
   }
 }

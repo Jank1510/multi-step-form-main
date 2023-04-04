@@ -5,15 +5,15 @@
         <div>
             <div>
                 <div>
-                    <p></p>
-                <p></p>
+                    <p>{{this.dataAll.getPlanSelected()+' ('+this.dataAll.getyearOrmonth()+'ly)'}}</p>
+                    <p>Change</p>
                 </div>
-                <span></span>
+                <span>{{this.dataAll.getTipoPlan()}}</span>
             </div>
             <div>
                 <div>
                     <p></p>
-                <p></p>
+                    <p></p>
                 </div>
                 <span></span>
             </div>
@@ -24,7 +24,7 @@
         </div>
     </div>
     <div>
-        <button>Go Back</button>
-        <button>Next Step</button>
+        <button (click)="back()">Go Back</button>
+        <button (click)="confirm()">Confirm</button>
     </div>
 </section>

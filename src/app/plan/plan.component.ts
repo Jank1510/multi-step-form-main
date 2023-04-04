@@ -22,9 +22,8 @@ export class PlanComponent implements OnInit {
         break;
     }
     this.yearMonth = data.getyearOrmonth()
-    console.log('entro en el constructor'+this.yearMonth)
     switch (this.yearMonth) {
-      case 'month':
+      case 'Month':
         this.displayyear = 'none'
         this.displaymont = 'block'
         this.colormonth = '#062951'
@@ -34,7 +33,7 @@ export class PlanComponent implements OnInit {
         this.txtadvanced = '$12/mo'
         this.txtpro = '$15/mo'
         break;
-      case 'year':
+      case 'Year':
         this.displayyear = 'block'
         this.displaymont = 'none'
         this.colormonth = 'hsl(231, 11%, 63%)'
@@ -69,9 +68,7 @@ export class PlanComponent implements OnInit {
 
 
 
-  changeYearToMonth(): void {
-    console.log('here'+this.yearMonth)
-    
+  changeYearToMonth(): void {    
     if (this.yearMonth == 'month') {
       this.yearMonth = 'year'
       this.displayyear = 'block'
@@ -82,8 +79,7 @@ export class PlanComponent implements OnInit {
       this.txtarcade = '$90/yr'
       this.txtadvanced = '$120/yr'
       this.txtpro = '$150/yr'
-      this.data.setyearOrmonth('month')
-
+      this.data.setyearOrmonth('Year') 
     } else {
       if (this.yearMonth == 'year') {
         this.yearMonth = 'month'
@@ -95,8 +91,7 @@ export class PlanComponent implements OnInit {
         this.txtarcade = '$9/mo'
         this.txtadvanced = '$12/mo'
         this.txtpro = '$15/mo'
-        this.data.setyearOrmonth('year')
-
+        this.data.setyearOrmonth('Month')
       }
     }
     this.arcadePro = true

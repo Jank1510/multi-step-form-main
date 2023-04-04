@@ -82,3 +82,19 @@ section p {
     align-items: center;
     justify-content: center;
 }
+.eleccion {
+    animation-duration: 1s;
+}
+
+@keyframes animationNoselected {
+    0% {
+        border: 0.1vw solid rgb(214, 217, 230);
+    }
+
+    50% {
+        border: 0.1vw solid rgb(224, 98, 98);
+    }
+    100% {
+        border: 0.1vw solid rgb(214, 217, 230);
+    }
+}
