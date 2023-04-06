@@ -69,8 +69,8 @@ export class PlanComponent implements OnInit {
 
 
   changeYearToMonth(): void {    
-    if (this.yearMonth == 'month') {
-      this.yearMonth = 'year'
+    if (this.yearMonth == 'Month') {
+      this.yearMonth = 'Year'
       this.displayyear = 'block'
       this.displaymont = 'none'
       this.colormonth = 'hsl(231, 11%, 63%)'
@@ -81,8 +81,8 @@ export class PlanComponent implements OnInit {
       this.txtpro = '$150/yr'
       this.data.setyearOrmonth('Year') 
     } else {
-      if (this.yearMonth == 'year') {
-        this.yearMonth = 'month'
+      if (this.yearMonth == 'Year') {
+        this.yearMonth = 'Month'
         this.displayyear = 'none'
         this.displaymont = 'block'
         this.colormonth = '#062951'
@@ -128,7 +128,7 @@ export class PlanComponent implements OnInit {
       this.arcadePro = false
       this.arcadeAdvanced = false
       this.arcadeSelected = true
-      this.data.setPlanSelected('arcade')
+      this.data.setPlanSelected('Arcade')
       this.data.setTipoPlan(this.txtarcade)
     } else {
       if (this.arcadeSelected == true) {
@@ -146,7 +146,7 @@ export class PlanComponent implements OnInit {
       this.arcadePro = false
       this.arcadeAdvanced = false
       this.arcadeAdvanced = true
-      this.data.setPlanSelected('advanced')
+      this.data.setPlanSelected('Advanced')
       this.data.setTipoPlan(this.txtadvanced)
     } else {
       if (this.arcadeAdvanced == true) {
@@ -164,7 +164,7 @@ export class PlanComponent implements OnInit {
       this.arcadeSelected = false
       this.arcadeAdvanced = false
       this.arcadePro = true
-      this.data.setPlanSelected('pro')
+      this.data.setPlanSelected('Pro')
       this.data.setTipoPlan(this.txtpro)
     } else {
       if (this.arcadePro == true) {

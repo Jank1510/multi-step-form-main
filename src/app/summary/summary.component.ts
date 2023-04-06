@@ -12,8 +12,7 @@ export class SummaryComponent implements OnInit {
   constructor(private data: DataService, private router: Router) {
     this.dataAll = data
     console.log(this.dataAll.getPlanSelected() + ' ' + this.dataAll.getTipoPlan())
-    console.log(this.dataAll.getTipoAddons())
-    console.log(this.dataAll.getyearOrmonth())
+    console.log(this.dataAll.getTipoAddons().length) 
   }
 
   ngOnInit(): void {
@@ -22,6 +21,9 @@ export class SummaryComponent implements OnInit {
     this.router.navigate(['add-ons'])
   }
   confirm(): void {
+
+  }
+  change():void{
 
   }
 }

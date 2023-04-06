@@ -18,3 +18,55 @@ section p {
     margin-top: 0.5vw;
     color: hsl(231, 11%, 63%);
 }
+
+.eleccion {
+    background-color: #f8f9fe;
+    border-radius: 0.6vw;padding-bottom: 0.01vw;
+}
+
+.infoplan {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.7vw;
+    box-shadow: 0 0.1vw 0 0 hsla(231.4, 11.1%, 62.9%, 0.42);
+}
+
+.infoplan * {
+    color: #062951;
+    font-weight: bold;
+}
+
+#change {
+    color: hsl(231, 11%, 63%);
+    cursor: pointer;
+    text-decoration: underline;
+    width: fit-content;
+    font-weight: normal;
+}
+
+#change:hover {
+    color: hsl(250.5, 74.1%, 48.4%);
+}
+
+.addons {
+    margin: 1.7vw;
+}
+
+.addons div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1vw;
+}
+
+.name {
+    color: hsl(231, 11%, 63%);
+
+}
+
+.valor {
+    color: #062951
+}

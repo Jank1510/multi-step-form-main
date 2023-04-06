@@ -1,21 +1,20 @@
 <section>
     <h1>Finishing up</h1>
     <p>Double-check everything looks OK before confirming.</p>
-    <div>
-        <div>
-            <div>
+    <div >
+        <div class="eleccion">
+            <div class="infoplan">
                 <div>
                     <p>{{this.dataAll.getPlanSelected()+' ('+this.dataAll.getyearOrmonth()+'ly)'}}</p>
-                    <p>Change</p>
+                    <p id="change" (click)="change()">Change</p>
                 </div>
                 <span>{{this.dataAll.getTipoPlan()}}</span>
             </div>
-            <div>
-                <div>
-                    <p></p>
-                    <p></p>
+            <div class="addons">  
+                <div *ngFor="let data of dataAll.getTipoAddons()">
+                    <span class="name">{{data.name}}</span>
+                    <span class="valor">{{data.valor}}</span>
                 </div>
-                <span></span>
             </div>
         </div>
         <div>

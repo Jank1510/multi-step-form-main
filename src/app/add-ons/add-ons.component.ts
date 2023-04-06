@@ -22,12 +22,12 @@ export class AddOnsComponent implements OnInit {
   customizableperfilTXT: string = ''
   constructor(private router: Router, private data: DataService) {
     switch (data.getyearOrmonth()) {
-      case 'year':
+      case 'Year':
         this.onlineserviceTXT = '+$10/yr'
         this.largestorageTXT = '+$20/yr'
         this.customizableperfilTXT = '+$20/yr'
         break;
-      case 'month':
+      case 'Month':
         this.onlineserviceTXT = '+$1/mo'
         this.largestorageTXT = '+$2/mo'
         this.customizableperfilTXT = '$2/mo'
