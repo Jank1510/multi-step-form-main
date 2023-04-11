@@ -6,7 +6,7 @@
             <div class="infoplan">
                 <div>
                     <p>{{this.dataAll.getPlanSelected()+' ('+this.dataAll.getyearOrmonth()+'ly)'}}</p>
-                    <p id="change" (click)="change()">Change</p>
+                    <p id="change" (click)="router_.navigate(['plan'])">Change</p>
                 </div>
                 <span>{{this.dataAll.getTipoPlan()}}</span>
             </div>

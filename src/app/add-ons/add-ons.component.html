@@ -2,7 +2,7 @@
     <h1>Pick add-ons</h1>
     <p>Add-ons help enhance your gaming experience.</p>
     <div>
-        <div [ngStyle]="{'border':border1}" (click)="checkOnlineService()" class="eleccion">
+        <div [ngStyle]="{'border':border1}" (click)="checkOnlineService(false)" class="eleccion">
             <div [ngStyle]="{'background-color':check1}" class="divcheck">
                 <img src="../../assets/images/icon-checkmark.svg" alt="  ">
             </div>
@@ -13,7 +13,7 @@
             </div>
             <span class="plus">{{onlineserviceTXT}}</span>
         </div>
-        <div [ngStyle]="{'border':border2}" (click)="checkLargeStorage()" class="eleccion">
+        <div [ngStyle]="{'border':border2}" (click)="checkLargeStorage(false)" class="eleccion">
             <div [ngStyle]="{'background-color':check2}" class="divcheck">
                 <img src="../../assets/images/icon-checkmark.svg" alt="  ">
             </div>
@@ -24,7 +24,7 @@
             </div>
             <span class="plus">{{largestorageTXT}}</span>
         </div>
-        <div [ngStyle]="{'border':border3}" (click)="checkCustomizableProfile()" class="eleccion">
+        <div [ngStyle]="{'border':border3}" (click)="checkCustomizableProfile(false)" class="eleccion">
             <div [ngStyle]="{'background-color':check3}" class="divcheck">
                 <img src="../../assets/images/icon-checkmark.svg" alt="  ">
             </div>

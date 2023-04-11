@@ -32,40 +32,35 @@ export class AddOnsComponent implements OnInit {
         this.largestorageTXT = '+$2/mo'
         this.customizableperfilTXT = '$2/mo'
         break;
-    }
-    console.log(this.data.getTipoAddons())
+    } 
     for (let index = 0; index < this.data.getTipoAddons().length; index++) {
       const element = this.data.getTipoAddons()[index];
       if (element.name == 'Online Service') {
-        this.checkOnlineService()
-        this.checkeado1 = true
+        this.checkOnlineService(true)
       } else {
         if (element.name == 'Larger Storage') {
-          this.checkLargeStorage()
-          this.checkeado2 = true
-
+          this.checkLargeStorage(true)
         } else {
           if (element.name == 'Customizable Profile') {
-            this.checkCustomizableProfile()
-            this.checkeado3 = true
-
+            this.checkCustomizableProfile(true)
           }
         }
       }
     }
-
   }
   ngOnInit(): void {
   }
-  checkOnlineService(): void {
+  checkOnlineService(callConstructor: boolean): void {
     if (this.checkeado1 == false) {
       this.check1 = '#4943fe'
       this.checkeado1 = true
       this.border1 = '0.1vw solid #062951'
-      this.data.setTipoAddons({
-        name: 'Online Service',
-        valor: this.onlineserviceTXT
-      })
+      if (callConstructor == false) {
+        this.data.setTipoAddons({
+          name: 'Online Service',
+          valor: this.onlineserviceTXT
+        })
+      }
     } else {
       if (this.checkeado1 == true) {
         this.check1 = '#ffffff'
@@ -75,15 +70,17 @@ export class AddOnsComponent implements OnInit {
       }
     }
   }
-  checkLargeStorage(): void {
+  checkLargeStorage(callConstructor: boolean): void {
     if (this.checkeado2 == false) {
       this.check2 = '#4943fe'
       this.checkeado2 = true
       this.border2 = '0.1vw solid #062951'
-      this.data.setTipoAddons({
-        name: 'Larger Storage',
-        valor: this.largestorageTXT
-      })
+      if (callConstructor == false) {
+        this.data.setTipoAddons({
+          name: 'Larger Storage',
+          valor: this.largestorageTXT
+        })
+      }
     } else {
       if (this.checkeado2 == true) {
         this.check2 = '#ffffff'
@@ -93,15 +90,17 @@ export class AddOnsComponent implements OnInit {
       }
     }
   }
-  checkCustomizableProfile(): void {
+  checkCustomizableProfile(callConstructor: boolean): void {
     if (this.checkeado3 == false) {
       this.check3 = '#4943fe'
       this.checkeado3 = true
       this.border3 = '0.1vw solid #062951'
-      this.data.setTipoAddons({
-        name: 'Customizable Profile',
-        valor: this.customizableperfilTXT
-      })
+      if (callConstructor == false) {
+        this.data.setTipoAddons({
+          name: 'Customizable Profile',
+          valor: this.customizableperfilTXT
+        })
+      }
     } else {
       if (this.checkeado3 == true) {
         this.check3 = '#ffffff'
