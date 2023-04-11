@@ -100,6 +100,9 @@ export class PlanComponent implements OnInit {
     this.arcade()
     this.pro()
     this.advanced()
+    this.data.setchangeyearmonth(true)
+    console.log(this.data.getchangeyearmonth())
+
   }
   next(): void {
     if (this.arcadePro == false && this.arcadeAdvanced == false && this.arcadeSelected == false) {

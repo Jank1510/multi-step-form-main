@@ -12,6 +12,7 @@ export class DataService {
   planSelected: string
   tipoPlan: string
   yearOrmonth: string
+  changeyearmont:boolean
   //addons
   addons: any = []
   constructor() {
@@ -21,6 +22,7 @@ export class DataService {
     this.planSelected = ''
     this.tipoPlan = ''
     this.yearOrmonth = 'Month'
+    this.changeyearmont=false
   }
   //info data
   getName(): string {
@@ -75,5 +77,11 @@ export class DataService {
   }
   getyearOrmonth(): string {
     return this.yearOrmonth
+  }
+  setchangeyearmonth(changeyearmont:boolean):void{
+    this.changeyearmont=changeyearmont
+  }
+  getchangeyearmonth():boolean{
+    return this.changeyearmont
   }
 }

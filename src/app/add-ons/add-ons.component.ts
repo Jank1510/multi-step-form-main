@@ -30,7 +30,7 @@ export class AddOnsComponent implements OnInit {
       case 'Month':
         this.onlineserviceTXT = '+$1/mo'
         this.largestorageTXT = '+$2/mo'
-        this.customizableperfilTXT = '$2/mo'
+        this.customizableperfilTXT = '+$2/mo'
         break;
     } 
     for (let index = 0; index < this.data.getTipoAddons().length; index++) {
@@ -47,6 +47,16 @@ export class AddOnsComponent implements OnInit {
         }
       }
     }
+    console.log(this.data.getchangeyearmonth())
+    if(this.data.getchangeyearmonth()==true){
+      this.checkeado1=true
+      this.checkeado2=true
+      this.checkeado3=true
+      this.checkCustomizableProfile(true)
+      this.checkLargeStorage(true)
+      this.checkOnlineService(true)
+      console.log('entro a la condicion')
+    }
   }
   ngOnInit(): void {
   }
@@ -61,6 +71,7 @@ export class AddOnsComponent implements OnInit {
           valor: this.onlineserviceTXT
         })
       }
+      this.data.setchangeyearmonth(false)
     } else {
       if (this.checkeado1 == true) {
         this.check1 = '#ffffff'
@@ -81,6 +92,7 @@ export class AddOnsComponent implements OnInit {
           valor: this.largestorageTXT
         })
       }
+      this.data.setchangeyearmonth(false)
     } else {
       if (this.checkeado2 == true) {
         this.check2 = '#ffffff'
@@ -101,6 +113,7 @@ export class AddOnsComponent implements OnInit {
           valor: this.customizableperfilTXT
         })
       }
+      this.data.setchangeyearmonth(false)
     } else {
       if (this.checkeado3 == true) {
         this.check3 = '#ffffff'
