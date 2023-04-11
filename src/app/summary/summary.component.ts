@@ -10,9 +10,8 @@ import { DataService } from '../service/data.service';
 export class SummaryComponent implements OnInit {
   dataAll: any
   constructor(private data: DataService, private router: Router) {
-    this.dataAll = data
-    console.log(this.dataAll.getPlanSelected() + ' ' + this.dataAll.getTipoPlan())
-    console.log(this.dataAll.getTipoAddons().length) 
+    this.dataAll = data 
+    console.log(this.dataAll.getTipoAddons()) 
   }
 
   ngOnInit(): void {

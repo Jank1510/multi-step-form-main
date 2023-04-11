@@ -33,6 +33,26 @@ export class AddOnsComponent implements OnInit {
         this.customizableperfilTXT = '$2/mo'
         break;
     }
+    console.log(this.data.getTipoAddons())
+    for (let index = 0; index < this.data.getTipoAddons().length; index++) {
+      const element = this.data.getTipoAddons()[index];
+      if (element.name == 'Online Service') {
+        this.checkOnlineService()
+        this.checkeado1 = true
+      } else {
+        if (element.name == 'Larger Storage') {
+          this.checkLargeStorage()
+          this.checkeado2 = true
+
+        } else {
+          if (element.name == 'Customizable Profile') {
+            this.checkCustomizableProfile()
+            this.checkeado3 = true
+
+          }
+        }
+      }
+    }
 
   }
   ngOnInit(): void {
@@ -104,7 +124,7 @@ export class AddOnsComponent implements OnInit {
       for (let i = 0; i < elementos.length; i++) {
         elementos[i].style.animationName = 'animationNoselected';
       }
-    } 
+    }
   }
   back(): void {
     this.router.navigate(['plan'])

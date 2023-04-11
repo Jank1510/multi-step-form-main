@@ -11,13 +11,13 @@ export class PlanComponent implements OnInit {
 
   constructor(private router: Router, private data: DataService) {
     switch (data.getPlanSelected()) {
-      case 'arcade':
+      case 'Arcade':
         this.arcade()
         break;
-      case 'advanced':
+      case 'Advanced':
         this.advanced()
         break;
-      case 'pro':
+      case 'Pro':
         this.pro()
         break;
     }
