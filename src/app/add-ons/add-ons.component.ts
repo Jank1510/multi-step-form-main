@@ -33,20 +33,6 @@ export class AddOnsComponent implements OnInit {
         this.customizableperfilTXT = '+$2/mo'
         break;
     } 
-    for (let index = 0; index < this.data.getTipoAddons().length; index++) {
-      const element = this.data.getTipoAddons()[index];
-      if (element.name == 'Online Service') {
-        this.checkOnlineService(true)
-      } else {
-        if (element.name == 'Larger Storage') {
-          this.checkLargeStorage(true)
-        } else {
-          if (element.name == 'Customizable Profile') {
-            this.checkCustomizableProfile(true)
-          }
-        }
-      }
-    }
     console.log(this.data.getchangeyearmonth())
     if(this.data.getchangeyearmonth()==true){
       this.checkeado1=true
@@ -57,6 +43,21 @@ export class AddOnsComponent implements OnInit {
       this.checkOnlineService(true)
       console.log('entro a la condicion')
     }
+    for (let index = 0; index < this.data.getTipoAddons().length; index++) {
+      const element = this.data.getTipoAddons()[index];
+      if (element.name == 'Online Service') {
+        this.checkOnlineService(true)
+      } else {
+        if (element.name == 'Larger Storage') { 
+          this.checkLargeStorage(true)
+        } else {
+          if (element.name == 'Customizable Profile') {
+            this.checkCustomizableProfile(true)
+          }
+        }
+      }
+    }
+   
   }
   ngOnInit(): void {
   }

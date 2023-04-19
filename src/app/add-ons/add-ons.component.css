@@ -85,7 +85,14 @@ section p {
 .eleccion {
     animation-duration: 1s;
 }
+.back{
+    background-color: #f8f9fe00 !important;
+    color: hsl(231, 11%, 63%) !important;
 
+}
+.back:hover{
+    color: #174a8b !important;
+}
 @keyframes animationNoselected {
     0% {
         border: 0.1vw solid rgb(214, 217, 230);

@@ -17,13 +17,13 @@
                 </div>
             </div>
         </div>
-        <div>
-            <span>Total(per {{this.dataAll.getyearOrmonth().toLowerCase()}})</span>
-            <span></span>
+        <div class="resultados">
+            <span class="totaltxt">Total (per {{this.dataAll.getyearOrmonth().toLowerCase()}})</span>
+            <span class="totalvalor">{{valorTotalTXT}}</span>
         </div>
     </div>
     <div class="boton">
-        <div (click)="back()">Go Back</div>
+        <div class="back" (click)="back()">Go Back</div>
         <div (click)="confirm()">Confirm</div>
     </div>
 </section>

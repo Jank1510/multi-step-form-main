@@ -79,7 +79,7 @@ section p {
 }
 
 .boton div {
-    background-color: #174a8b;
+    background-color: #3d35d8;
     height: 2.65vw;
     width: 8vw;
     color: white;
@@ -90,4 +90,24 @@ section p {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.back{
+    background-color: #f8f9fe00 !important;
+    color: hsl(231, 11%, 63%) !important;
+
+}
+.back:hover{
+    color: #174a8b !important;
+}
+.resultados{
+    margin: 1.7vw;
+display: flex;
+justify-content: space-between; 
+}
+.totaltxt{
+    color: hsl(231, 11%, 63%);
+}
+.totalvalor{
+    color: #453dd5;
+    font-size: 1.3vw;
 }
