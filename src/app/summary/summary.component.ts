@@ -12,7 +12,9 @@ export class SummaryComponent implements OnInit {
   router_: any
   valorTotal:number=0
   valorTotalTXT!:string
+  confirm:boolean
   constructor(private data: DataService, private router: Router) {
+    this.confirm=false
     this.dataAll = data
     this.router_ = router 
     this.valorTotal=parseInt(this.dataAll.getTipoPlan().match(/\d+/g).toString())+this.valorTotal
@@ -36,7 +38,7 @@ export class SummaryComponent implements OnInit {
   back(): void {
     this.router.navigate(['add-ons'])
   }
-  confirm(): void {
-
+  confirmClick(): void {
+    this.confirm=true
   }
 }

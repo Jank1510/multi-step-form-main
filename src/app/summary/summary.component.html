@@ -1,4 +1,4 @@
-<section>
+<section *ngIf="confirm==false">
     <h1>Finishing up</h1>
     <p>Double-check everything looks OK before confirming.</p>
     <div >
@@ -24,6 +24,15 @@
     </div>
     <div class="boton">
         <div class="back" (click)="back()">Go Back</div>
-        <div (click)="confirm()">Confirm</div>
+        <div (click)="confirmClick()">Confirm</div>
     </div>
+</section>
+<section class="thank" *ngIf="confirm==true">
+    <img src="../../assets/images/icon-thank-you.svg" alt="Thank">
+    <h1>Thank you!</h1>
+    <p>Thanks for confirming your subscription! We hope you have
+        Fun using our platform. If you ever need support, please feel
+        free to email us at supportEloremgaming.com.</p>
+    <h1>Gisswla te amo</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem blanditiis nihil provident vero, velit magnam voluptatem? Praesentium error repellat, minima animi earum perspiciatis, repellendus ipsa odit excepturi, rerum a quod.</p>
 </section>

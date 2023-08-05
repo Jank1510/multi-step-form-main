@@ -1,9 +1,6 @@
 header {
-    background-image: url('../assets/images/bg-sidebar-desktop.svg');
     background-size: cover;
     background-repeat: no-repeat;
-    width: 28%;
-    margin: 2%;
     border-radius: 1vw;
 }
 
@@ -20,25 +17,27 @@ header ul li {
     align-items: center;
     margin-bottom: 2vw;
 }
-main{
+
+main {
     width: 67.5%;
 }
 
 .navNum {
     width: 2.5vw;
     height: 2.5vw;
-    border-radius: 3.5vw; 
+    border-radius: 3.5vw;
     display: flex;
     justify-content: center;
     border: 0.1vw solid hsl(229, 24%, 87%);
     align-items: center;
-    font-size: 1.1vw;
     color: white;
 }
-#nav1{
+
+#nav1 {
     background-color: #bee1fd;
     color: black;
 }
+
 .navInfo p {
     margin: 0;
 }
@@ -51,13 +50,85 @@ main{
 }
 
 .navInfo .step {
-    font-size: 1vw;
     color: hsl(229, 24%, 87%);
 }
 
 .navInfo .txtNav {
     color: white;
-    ;
     font-weight: bold;
-    font-size: 1.1vw;
+}
+
+.content {
+    height: 75vh;
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    border-radius: 1vw;
+    box-shadow: 0 0.2vw 1.5vw -0.4vw #00000036;
+
+}
+
+@media (min-width: 350px) {
+    .content {
+        width: 85vw;
+        flex-direction: column;
+    }
+
+    .navNum {
+        font-size: 1.1rem;
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 3.5rem;
+    }
+
+    .navInfo {
+        display: none;
+    }
+
+    header ul {
+        display: flex;
+        flex-direction: row;
+        column-gap: 1rem;
+    }
+
+    header {
+        width: 100%;
+        margin: 0;
+        position: absolute;
+        top: 0;
+        background-image: url('../assets/images/bg-sidebar-mobile.svg');
+        left: 0;
+    }
+}
+
+@media (min-width: 700px) {
+    .content {
+        width: 60vw;
+        flex-direction: row;
+    }
+
+    .navNum {
+        font-size: 1.1vw;
+    }
+
+    .navInfo .step {
+        font-size: 1vw;
+    }
+
+    .navInfo .txtNav {
+
+        font-size: 1.1vw;
+    }
+
+    header ul {
+        flex-direction: column;
+    }
+
+    header {
+        width: 28%;
+        margin: 2%;
+        background-image: url('../assets/images/bg-sidebar-desktop.svg');
+        position: relative;
+    }
 }
